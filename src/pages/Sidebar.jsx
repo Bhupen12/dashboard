@@ -74,7 +74,7 @@ const Sidebar = () => {
     <div>
       <div
         onClick={() => setOpen(false)}
-        className={`md:hidden fixed inset-0 max-h-screen z-[998] bg-black/50 ${
+        className={`md:hidden fixed inset-0  z-[998] bg-black/50 ${
           open ? "block" : "hidden"
         } `}
       ></div>
@@ -101,20 +101,20 @@ const Sidebar = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink to={"/authentication"} className="link">
+              <NavLink to={"/product"} className="link">
                 <CiDatabase size={23} className="min-w-max" />
                 Product
               </NavLink>
             </li>
             <li>
-              <NavLink to={"/stroage"} className="link">
+              <NavLink to={"/customers"} className="link">
                 <CiUser size={23} className="min-w-max" />
                 Customers
               </NavLink>
             </li>
 
             <li>
-              <NavLink to={"/settings"} className="link">
+              <NavLink to={"/income"} className="link">
                 <CiBadgeDollar size={23} className="min-w-max" />
                 Income
               </NavLink>
