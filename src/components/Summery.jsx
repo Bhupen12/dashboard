@@ -32,7 +32,7 @@ const Summery = () => {
     },
   ];
   return (
-    <div className="grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2">
+    <div className="grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2 justify-between">
       {summeryList.map((item, index) => {
         return <SummeryCard key={index} {...item} />;
       })}
@@ -42,7 +42,7 @@ const Summery = () => {
 
 const SummeryCard = ({ name, icon, price, color }) => {
   return (
-    <div className="flex flex-row bg-white m-4 rounded-md h-24 mx-8">
+    <div className="flex flex-row bg-white my-4 rounded-md h-24 mx-4">
       <div className="flex-1 grid place-content-center my-1 md:my-2 rounded-full w-1/5">
         <img
           className={`object-contain p-1 h-12 w-12 bg-[${color}]`}
