@@ -68,10 +68,8 @@ const Sidebar = () => {
         },
       };
 
-  const menuItems = ["All Apps", "Authentication", "Stroage", "Settings"];
-
   return (
-    <div>
+    <div className="top-0 bottom-0">
       <div
         onClick={() => setOpen(false)}
         className={`md:hidden fixed inset-0  z-[998] bg-black/50 ${
@@ -89,7 +87,12 @@ const Sidebar = () => {
       >
         <div className="flex items-center gap-2.5 font-medium border-b py-3 border-slate-300  mx-3">
           <CiMemoPad size={46} color="darkblue" className="min-w-max" />
-          <span className="text-2xl whitespace-pre">Dashboard</span>
+          <span
+            className="text-2xl font-bold uppercase whitespace-pre"
+            style={{ fontFamily: "'Exo 2', sans-serif" }}
+          >
+            Dashboard
+          </span>
         </div>
 
         <div className="flex flex-col  h-full">

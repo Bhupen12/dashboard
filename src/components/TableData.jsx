@@ -1,5 +1,7 @@
 import React from "react";
 import { BsSearch } from "react-icons/bs";
+import macbook from "../assets/img/macbook.webp";
+import iphone15 from "../assets/img/iphone15.webp";
 
 const TableData = () => {
   return (
@@ -9,8 +11,8 @@ const TableData = () => {
           <p className="text-2xl font-bold">Product Sell</p>
         </div>
         <div className="flex-auto"></div>
-        <div className=" bg-white hover:bg-slate-100 rounded-2xl p-2 ml-4">
-          <div className="flex items-center rounded-sm bg-white ">
+        <div className="rounded-2xl p-2 ml-4 border-2 ">
+          <div className="flex items-center rounded-sm ">
             <BsSearch className="text-gray-500 text-lg block float-left cursor-pointer mr-2" />
             <input
               type={"search"}
@@ -28,6 +30,29 @@ const TableData = () => {
 };
 
 const TableUi = () => {
+  const tableData = [
+    {
+      productName: {
+        imgSrc: macbook,
+        name: "Apple MacBook Pro 17",
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. ",
+      },
+      stock: "10",
+      price: "$ 2999",
+      totalSales: "20",
+    },
+    {
+      productName: {
+        imgSrc: iphone15,
+        name: "Iphone 15",
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+      },
+      stock: "20",
+      price: "$ 5999",
+      totalSales: "90",
+    },
+  ];
+
   return (
     <div>
       <div class="relative overflow-x-auto">
@@ -38,41 +63,56 @@ const TableUi = () => {
                 Product name
               </th>
               <th scope="col" class="px-6 py-3">
-                Color
-              </th>
-              <th scope="col" class="px-6 py-3">
-                Category
+                Stock
               </th>
               <th scope="col" class="px-6 py-3">
                 Price
               </th>
+              <th scope="col" class="px-6 py-3">
+                Total Sales
+              </th>
             </tr>
           </thead>
           <tbody>
-            <tr class="border-b ">
-              <th scope="row" class="px-6 py-4 font-large whitespace-nowrap ">
-                Apple MacBook Pro 17"
-              </th>
-              <td class="px-6 py-4">Silver</td>
-              <td class="px-6 py-4">Laptop</td>
-              <td class="px-6 py-4">$2999</td>
-            </tr>
-            <tr class="border-b">
-              <th scope="row" class="px-6 py-4 font-large  whitespace-nowrap ">
-                Microsoft Surface Pro
-              </th>
-              <td class="px-6 py-4">White</td>
-              <td class="px-6 py-4">Laptop PC</td>
-              <td class="px-6 py-4">$1999</td>
-            </tr>
-            <tr class="">
-              <th scope="row" class="px-6 py-4 font-large whitespace-nowrap ">
-                Magic Mouse 2
-              </th>
-              <td class="px-6 py-4">Black</td>
-              <td class="px-6 py-4">Accessories</td>
-              <td class="px-6 py-4">$99</td>
-            </tr>
+            {tableData.map((item, index) => {
+              return (
+                <tr class="border-b">
+                  <td class="px-6 py-4">
+                    <div className="flex flex-row">
+                      <div>
+                        <img
+                          src={item.productName.imgSrc}
+                          alt=""
+                          className="object-contain p-1 h-12 w-12"
+                        />
+                      </div>
+                      <div className="flex flex-col justify-center px-2">
+                        <div>
+                          <p
+                            className="text-sm font-bold"
+                            style={{ fontFamily: "'Exo 2', sans-serif" }}
+                          >
+                            {item.productName.name}
+                          </p>
+                        </div>
+                        <div>
+                          <p className="text-xs text-gray-500">
+                            {item.productName.desc}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="px-6 py-4  font-mono text-lg">{item.stock}</td>
+                  <td class="px-6 py-4  font-mono text-lg font-bold">
+                    {item.price}
+                  </td>
+                  <td class="px-6 py-4  font-mono text-lg">
+                    <p className="">{item.totalSales}</p>
+                  </td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>

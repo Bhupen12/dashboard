@@ -1,13 +1,9 @@
 import React from "react";
-import Summery from "../components/Summery";
-import BarChart from "../components/BarChart";
-import PieChart from "../components/PieChart";
-import TableData from "../components/TableData";
 import { BsSearch } from "react-icons/bs";
 
-const Home = () => {
+const Header = () => {
   return (
-    <div className="">
+    <>
       <div className="flex flex-row mx-4">
         <div className="flex-none">
           <p
@@ -29,22 +25,8 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div>
-        <Summery />
-      </div>
-      <div className="mt-5 mx-4 grid grid-rows-3 grid-flow-col gap-4 w-3/4">
-        <div className="bg-white rounded-lg md:row-span-3">
-          <BarChart />
-        </div>
-        <div className="bg-white rounded-lg md:row-span-3 justify-self-center self-center">
-          <PieChart />
-        </div>
-      </div>
-      <div className="m-5 bg-white rounded-lg">
-        <TableData />
-      </div>
-    </div>
+    </>
   );
 };
 
-export default Home;
+export default Header;

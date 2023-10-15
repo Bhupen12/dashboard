@@ -10,10 +10,13 @@ function App() {
   return (
     <BrowserRouter>
       <div className="flex gap-5">
-        <div>
+        <div style={{ position: "sticky", top: 0, bottom: 0, height: "100vh" }}>
           <Sidebar />
         </div>
-        <div className="max-w-5xl flex-1 mx-auto py-4">
+        <div
+          className=" flex-1 mx-0 py-0 md:mx-auto md:py-4"
+          style={{ overflow: "hidden" }}
+        >
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/product" element={<Product />} />
