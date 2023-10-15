@@ -139,7 +139,7 @@ const Sidebar = () => {
             <div className="flex-1 text-sm z-50  max-h-48 my-auto  whitespace-pre   w-full  font-medium  ">
               <div className="flex border-y border-slate-300 p-4 items-center justify-between">
                 <div>
-                  <p>Spark</p>
+                  <p>Fitpeo</p>
                   <small>No-cost $0/month</small>
                 </div>
                 <p className="text-teal-500 py-1.5 px-3 text-xs bg-teal-50 rounded-xl">

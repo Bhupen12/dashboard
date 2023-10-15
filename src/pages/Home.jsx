@@ -32,11 +32,11 @@ const Home = () => {
       <div>
         <Summery />
       </div>
-      <div className="mt-5 mx-4 grid grid-rows-3 grid-flow-col gap-4 w-3/4">
-        <div className="bg-white rounded-lg md:row-span-3">
+      <div className="mt-5 mx-4 flex flex-col md:flex-row gap-4">
+        <div className="md:flex-auto bg-white rounded-lg">
           <BarChart />
         </div>
-        <div className="bg-white rounded-lg md:row-span-3 justify-self-center self-center">
+        <div className="md:flex-auto bg-white rounded-lg justify-self-center self-center">
           <PieChart />
         </div>
       </div>

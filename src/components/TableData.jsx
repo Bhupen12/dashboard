@@ -51,6 +51,26 @@ const TableUi = () => {
       price: "$ 5999",
       totalSales: "90",
     },
+    {
+      productName: {
+        imgSrc: macbook,
+        name: "Apple MacBook Pro 17",
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. ",
+      },
+      stock: "10",
+      price: "$ 2999",
+      totalSales: "20",
+    },
+    {
+      productName: {
+        imgSrc: iphone15,
+        name: "Iphone 15",
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+      },
+      stock: "20",
+      price: "$ 5999",
+      totalSales: "90",
+    },
   ];
 
   return (
@@ -78,7 +98,7 @@ const TableUi = () => {
               return (
                 <tr class="border-b">
                   <td class="px-6 py-4">
-                    <div className="flex flex-row">
+                    <div className="flex flex-col md:flex-row">
                       <div>
                         <img
                           src={item.productName.imgSrc}
