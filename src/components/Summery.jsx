@@ -9,7 +9,7 @@ const Summery = () => {
     {
       icon: <MdOutlineSupervisorAccount />,
       amount: "$198K",
-      percentage: "-4%",
+      percentage: "-4",
       title: "Earning",
       iconColor: "#03C9D7",
       iconBg: "#E5FAFB",
@@ -18,7 +18,7 @@ const Summery = () => {
     {
       icon: <BsBoxSeam />,
       amount: "$2.4K",
-      percentage: "+23%",
+      percentage: "+23",
       title: "Order",
       iconColor: "rgb(255, 244, 229)",
       iconBg: "rgb(254, 201, 15)",
@@ -27,7 +27,7 @@ const Summery = () => {
     {
       icon: <FiBarChart />,
       amount: "$2.4K",
-      percentage: "+38%",
+      percentage: "+38",
       title: "Balance",
       iconColor: "rgb(228, 106, 118)",
       iconBg: "rgb(255, 244, 229)",
@@ -36,7 +36,7 @@ const Summery = () => {
     {
       icon: <HiOutlineRefresh />,
       amount: "$89K",
-      percentage: "-12%",
+      percentage: "-12",
       title: "Total Sales",
       iconColor: "rgb(0, 194, 146)",
       iconBg: "rgb(235, 250, 242)",
@@ -64,7 +64,7 @@ const SummeryCard = ({
   return (
     <div
       key={title}
-      className="bg-white h-auto dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56  p-4 rounded-2xl flex flex-row"
+      className="bg-white h-auto dark:text-gray-200 dark:bg-secondary-dark-bg m-2 p-4 rounded-2xl flex flex-row w-[-webkit-fill-available] md:w-56"
     >
       <div>
         <button
@@ -79,7 +79,11 @@ const SummeryCard = ({
         <p className=" text-sm text-gray-400">{title}</p>
         <p className="mt-1">
           <span className="font-bold text-black">{amount}</span>
-          <span className={`text-sm text-${pcColor} ml-2`}>{percentage}</span>
+          {percentage > 0 ? (
+            <span className={`text-sm text-green-600 ml-2`}>{percentage}%</span>
+          ) : (
+            <span className={`text-sm text-red-600 ml-2`}>{percentage}%</span>
+          )}
         </p>
       </div>
     </div>

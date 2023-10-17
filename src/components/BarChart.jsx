@@ -55,7 +55,7 @@ const BarChart = () => {
   };
 
   return (
-    <div className="">
+    <div className="mx-4">
       <Bar className="bg-white rounded-md" data={data} options={options}></Bar>
     </div>
   );

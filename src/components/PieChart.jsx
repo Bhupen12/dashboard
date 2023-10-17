@@ -17,7 +17,7 @@ const data = {
 
 const PieChart = () => {
   return (
-    <div className="">
+    <div className=" mx-4">
       {/* size of pie chart */}
       <Pie className="bg-white rounded-md h-36 p-2" data={data} />
     </div>
